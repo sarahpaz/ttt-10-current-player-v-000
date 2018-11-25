@@ -9,7 +9,7 @@ def turn_count(board)
   return turns
 end
 
-# who's turn is "X" or "O"
+# whose turn is "X" or "O"
 =begin
 def current_player(board)
   if turn_count(board) % 2 == 0
