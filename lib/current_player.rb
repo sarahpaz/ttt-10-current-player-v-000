@@ -3,5 +3,7 @@ def turn_count(board)
   if turn_count(board) == 1
     current_player("X")
     count += 2
+  elsif
+    current_player("0")
   end
 end
