@@ -1,37 +1,37 @@
 # how many turns have been played
+
 def turn_count(board)
-  turns = 0
-  board.each do | input |
-    if input == "X" || input == "O"
-      turns += 1
+    counter = 0
+
+    board.each do |input|
+      if input == "X" || input == "O"
+        counter += 1
+      end
     end
-  end
-  return turns
+    counter
 end
 
-# whose turn is "X" or "O"
-=begin
-def current_player(board)
-  if turn_count(board) % 2 == 0
-    return "X"
-  else
-    return "O"
-  end
-end
-=end
+# whose turn is it - "X" or "O"
 
-# using .even instead of %
-=begin
-def current_player(board)
-  if turn_count(board).even?
-    return "X"
-  else
-    return "O"
-  end
-end
-=end
+# def current_player(board)
+#     if turn_count(board) % 2 == 0
+#       return "X"
+#     else
+#       return "O"
+#     end
+# end
 
-# using ternary operator
+# whose turn is it - "X" or "O" - using .even
+
+# def current_player(board)
+#     if turn_count(board).even?
+#       return "X"
+#     else
+#       return "O"
+#     end
+# end
+
+# whose turn is it - "X" or "O" - ternary operator
 def current_player(board)
-  turn_count(board) % 2 == 0 ? "X" : "O"
+  turn_count(board).even? ? "X" :  "O"
 end
